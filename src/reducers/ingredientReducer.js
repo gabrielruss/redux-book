@@ -1,9 +1,9 @@
 import initialState from './initialState';
-import * as types from '../actions/actionTypes';
+import { ADD_INGREDIENT } from '../actions/actionTypes';
 
 export default function ingredientReducer(state = initialState, action) {
   switch (action.type) {
-    case types.ADD_INGREDIENT:
+    case ADD_INGREDIENT:
       const newIngredient = {
         recipe: action.recipe,
         name: action.name,
@@ -12,7 +12,7 @@ export default function ingredientReducer(state = initialState, action) {
       return Object.assign({}, state, {
         ingredients: state.ingredients.concat(newIngredient)
       });
-      
+
     default:
       return state;
   }
