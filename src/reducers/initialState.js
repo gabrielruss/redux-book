@@ -7,7 +7,7 @@ const initialState = {
   ingredients: [
     {
       recipe: 'Omelette',
-      name: 'Egg',
+      name: 'Eggs',
       quantity: 2
     }
   ]

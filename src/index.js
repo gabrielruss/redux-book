@@ -6,13 +6,15 @@ import configureStore from './store/configureStore';
 import addIngredient from './actions/ingredientActions';
 import addRecipe from './actions/recipeActions';
 
+import App from './containers/App';
+
 const store = configureStore();
 store.dispatch(addRecipe('Pancake'));
 store.dispatch(addIngredient('Pancake', 'Eggs', 3));
 
 ReactDOM.render(
   <Provider store={store}>
-    <div>test</div>
+    <App />
   </Provider>,
   document.getElementById('root')
 );
