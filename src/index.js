@@ -10,7 +10,7 @@ import App from './containers/App';
 
 const store = configureStore();
 store.dispatch(addRecipe('Pancake'));
-store.dispatch(addIngredient('Pancake', 'Eggs', 3));
+store.dispatch(addIngredient('Pancake', 'Flour', 3));
 
 ReactDOM.render(
   <Provider store={store}>
